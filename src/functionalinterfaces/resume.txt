@@ -1,0 +1,9 @@
+Functional Interfaces
+    É uma interface que possui exatamente um método abstracted
+    São anotadas com a anotação @FunctionalInterface
+
+    Novas Functional Interfaces introduzidas no Java 8
+        * Consumer - BiConsumer;
+        * Predicate - BiPredicate;
+        * Function - BiFunction, UnaryOperator, BinaryOperator;
+        * Supplier.
