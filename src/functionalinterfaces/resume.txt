@@ -1,6 +1,10 @@
 Functional Interfaces
     É uma interface que possui exatamente um método abstracted
     São anotadas com a anotação @FunctionalInterface
+    Interfaces funcionais em Java são interfaces que possuem exatamente
+    um único método abstrato, embora possam ter múltiplos métodos default ou estáticos.
+    Elas são fundamentais para o uso de expressões lambda e métodos de referência,
+    introduzidos no Java 8, que permitem tratar código como dados.
 
     Novas Functional Interfaces introduzidas no Java 8
         * Consumer - BiConsumer;
