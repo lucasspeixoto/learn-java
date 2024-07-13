@@ -7,7 +7,65 @@ Functional Interfaces
     introduzidos no Java 8, que permitem tratar código como dados.
 
     Novas Functional Interfaces introduzidas no Java 8
-        * Consumer - BiConsumer;
-        * Predicate - BiPredicate;
-        * Function - BiFunction, UnaryOperator, BinaryOperator;
+        * Consumer;
+        * BiConsumer;
+        * Predicate;
+        * BiPredicate;
+        * Function;
+        * BiFunction;
+        * UnaryOperator;
+        * BinaryOperator;
         * Supplier.
+
+Consumers
+A interface Consumer<T> representa uma operação que aceita um único argumento de entrada
+ e não retorna nenhum resultado. É tipicamente usada para executar alguma ação
+ com um objeto passado como argumento.
+        List<String> lista = Arrays.asList("Java", "Python", "C++");
+        Consumer<String> imprimir = s -> System.out.println("Elemento: " + s);
+        lista.forEach(imprimir);
+
+Predicates
+A interface Predicate<T> representa uma operação que aceita um único argumento de
+ entrada e retorna um valor booleano. É tipicamente usada para testar se um objeto
+ atende a uma condição específica.
+        List<String> lista = Arrays.asList("Java", "Python", "C++");
+        Predicate<String> startsWithJ = s -> s.startsWith("J");
+        lista.stream()
+             .filter(startsWithJ)
+             .forEach(System.out::println);
+
+Function
+Uma Function<T, R> é uma interface funcional que aceita um argumento e retorna
+ um resultado. É usada para transformar ou mapear o argumento para outro tipo.
+         List<String> lista = Arrays.asList("Java", "Python", "C++");
+         Function<String, Integer> obterComprimento = s -> s.length();
+         lista.stream()
+              .map(obterComprimento)
+              .forEach(System.out::println);
+
+UnaryOperator
+No Java, a interface funcional UnaryOperator<T> é uma subinterface de Function<T, T> que
+  representa uma operação sobre um único operando que produz um resultado do mesmo tipo que
+  seu operando. Esta interface é útil para definir operações matemáticas, manipulações de
+  objetos ou qualquer operação que receba um único argumento e retorne um resultado do mesmo tipo.
+        List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
+        UnaryOperator<Integer> double = x -> x * 2;
+        List<Integer> resultado = numbers.stream()
+                                         .map(double)
+                                         .collect(Collectors.toList());
+
+BinaryOperator
+No Java, a interface funcional BinaryOperator<T> é uma subinterface de BiFunction<T, T, T> que representa
+ uma operação sobre dois operandos do mesmo tipo que produz um resultado do mesmo tipo que seus operandos.
+ Esta interface é útil para definir operações matemáticas, manipulações de objetos ou qualquer operação que
+  receba dois argumentos e retorne um resultado do mesmo tipo.
+        BinaryOperator<String> concatWords = (s1, s2) -> s1 + s2;
+
+        String result = concatWords.apply("Hello, ", "world!");
+        System.out.println(result);  // --> Hello, world!
+
+Supplier
+No Java, a interface funcional Supplier<T> é usada para representar uma função que fornece um resultado de um
+ determinado tipo, mas não recebe nenhum argumento. Essencialmente, um Supplier é uma fábrica ou um gerador de valores.
+  Esta interface é útil quando precisamos obter ou gerar valores sob demanda, especialmente em cenários onde a geração do valor pode ser custosa ou depende de condições dinâmicas.
