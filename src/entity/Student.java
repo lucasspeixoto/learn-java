@@ -54,6 +54,10 @@ public class Student {
         return activities;
     }
 
+    public void printListOfActivities() {
+        System.out.println(activities);
+    }
+
     public void setActivities(List<String> activities) {
         this.activities = activities;
     }

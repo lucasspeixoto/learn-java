@@ -8,7 +8,9 @@ public class FunctionExample {
 
     static List<String> languages = Arrays.asList("Java", "Python", "C++", "Golang", "Ruby", "Rust", "PHP");
 
-    static Function<String, Integer> getLength = String::length;
+    static Function<String, Integer> getLength = (s) -> s.length();
+
+    static Function<String, Integer> getLengthWithMethodReference = String::length;
 
     static Function<String, String> toUpperCase = String::toUpperCase;
 

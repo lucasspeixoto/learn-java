@@ -2,9 +2,13 @@ package entity;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.Supplier;
 
 public class StudentDataBase {
 
+    public static Supplier<Student> studentSupplier = () -> {
+        return new Student("Lucas", 4, 3.9, "male", Arrays.asList("powerlifting", "arm wrestling", "bodybuilding", "football"));
+    };
     public static List<Student> getAllStudents() {
 
         // 2nd grade students

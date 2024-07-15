@@ -47,7 +47,7 @@ Uma Function<T, R> é uma interface funcional que aceita um argumento e retorna
 UnaryOperator
 No Java, a interface funcional UnaryOperator<T> é uma subinterface de Function<T, T> que
   representa uma operação sobre um único operando que produz um resultado do mesmo tipo que
-  seu operando. Esta interface é útil para definir operações matemáticas, manipulações de
+  seu operando. Esta interface pode ser usada para definir operações matemáticas, manipulações de
   objetos ou qualquer operação que receba um único argumento e retorne um resultado do mesmo tipo.
         List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
         UnaryOperator<Integer> double = x -> x * 2;
@@ -56,7 +56,7 @@ No Java, a interface funcional UnaryOperator<T> é uma subinterface de Function<
                                          .collect(Collectors.toList());
 
 BinaryOperator
-No Java, a interface funcional BinaryOperator<T> é uma subinterface de BiFunction<T, T, T> que representa
+No Java, a interface funcional BinaryOperator<T> é uma sub-interface de BiFunction<T, T, T> que representa
  uma operação sobre dois operandos do mesmo tipo que produz um resultado do mesmo tipo que seus operandos.
  Esta interface é útil para definir operações matemáticas, manipulações de objetos ou qualquer operação que
   receba dois argumentos e retorne um resultado do mesmo tipo.
