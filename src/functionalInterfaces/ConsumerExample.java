@@ -1,4 +1,4 @@
-package functionalinterfaces;
+package functionalInterfaces;
 
 import entity.Student;
 import entity.StudentDataBase;

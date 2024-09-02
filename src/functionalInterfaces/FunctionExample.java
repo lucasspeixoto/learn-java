@@ -1,4 +1,4 @@
-package functionalinterfaces;
+package functionalInterfaces;
 
 import java.util.Arrays;
 import java.util.List;

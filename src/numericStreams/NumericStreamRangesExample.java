@@ -1,4 +1,4 @@
-package numericstreams;
+package numericStreams;
 
 import java.util.stream.IntStream;
 import java.util.stream.LongStream;
