@@ -23,6 +23,6 @@ public class StudentDataBase {
         Student student5 = new Student("Sophia", 4, 3.5, "female", Arrays.asList("swimming", "dancing", "football"));
         Student student6 = new Student("James", 4, 3.9, "male", Arrays.asList("swimming", "basketball", "baseball", "football"));
 
-        return Arrays.asList(student1, student2, student3, student4, student5, student6);
+        return Arrays.asList(student1, student2, student3, student4, student5, student6, null);
     }
 }
